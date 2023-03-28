@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function tab(){
+            document.write("&nbsp;&nbsp;");
+        }
+       
+        function vehinh1() {
+            let a=parseInt(document.getElementById("txta").value);
+            if(isNaN(a)){
+                alert("Nhap lai!");
+                return;
+            }
+            for(let i=1;i<=a;++i){
+                for(let j=a;j>i;--j){
+                    tab();
+                }
+                for(let j=1;j<=i*2-1;++j){
+                    document.write("*");
+                }
+                document.write("<br>");
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>Nhập a: </p>
+    <input type="text" id="txta">
+    <button type="button" onclick="vehinh1()">Vẽ</button>
+</body>
+</html>

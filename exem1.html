@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Tong(){
+            let a=document.getElementById("txta").value;
+            let b=document.getElementById("txtb").value;
+            let c=document.getElementById("txtc").value;
+            if(isNaN(a)&&isNaN(b)&&isNaN(c)){
+                alert("Nhập đầy đủ số a,b,c");
+                return;
+            }
+            if(a==0){
+                if(b==0){
+                    if(c==0) alert("PT vo so nghiem");
+                    else alert("PT vo nghiem");
+                } else {
+                    let x=-c/b;
+                    alert("PT co nghiem la: "+x);
+                }
+            }else{
+                let denta=Math.pow(b,2)-4*a*c;
+                if(denta<0)alert("PT vo nghiem");
+                else if(denta==0){
+                    let x=-b/(2*a);
+                    alert("PT co nghiem kep la: "+x);
+                }else{
+                    denta=Math.sqrt(denta);
+                    let x1=(-b+denta)/(2*a);
+                    let x2=(-b-denta)/(2*a);
+                    alert("PT co 2 nghiem phan biet la: \nX1: "+x1+"\nX2: "+x2);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>Nhập số a</p>
+    <input type="text" id="txta">
+    <p>Nhập số b</p>
+    <input type="text" id="txtb"> 
+    <p>Nhập số c</p>
+    <input type="text" id="txtc"> 
+    <button type="button" onclick="Tong()">Tính nghiệm pt bậc 2</button>
+</body>
+</html>

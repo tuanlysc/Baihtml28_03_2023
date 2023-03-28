@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bai27_03_2023.css">
+</head>
+<body>
+    <div id="wapper">
+        <h1 id="form_heading">Registration Form</h1>
+        <p id="intro">Please fill out this form with the required information</p>
+        <div id="form_group">
+            <div class="form_group-input">
+                <p class="input_text" >Enter Your First Name:</p>
+                <input type="text" class="form_input" id="firstname">
+            </div>
+            <div class="form_group-input">
+                <p class="input_text" >Enter Your Last Name:</p>
+                <input type="text" class="form_input" id="lastname">
+            </div>
+            <div class="form_group-input">
+                <p class="input_text" >Enter Your Email:</p>
+                <input type="text" class="form_input" id="email">
+            </div>
+            <div class="form_group-input">
+                <p class="input_text" >Create a New Password:</p>
+                <input type="password" class="form_input" id="password">
+            </div>
+        </div>
+        <hr width="40%"/>
+        <div id="account_chose">
+            <li style="list-style: none;" class="list_style">
+                <input name="information" type="radio">    Personal Account
+            </li>
+            <li style="list-style: none;" class="list_style">
+                <input name="information" type="radio">    Business Account
+            </li>
+            <li style="list-style: none;" class="list_style">
+                <input type="checkbox">    I accept the <a style="color: #f5f5f5;" href="">terms and conditions</a>
+            </li>
+        </div>
+        <hr width="40%"/>
+        <div id="form_footer">
+            <div class="form_footer-input">
+                <p class="input_text">Upload a profile picture:</p>
+                <input type="file" style="background-color: rgb(44, 41, 41);" class="file_upload">
+            </div>
+            <div class="form_footer-input">
+                <p class="input_text">Input your age(years):</p>
+                <input type="text" class="form_input" id="age">
+            </div>
+            <div class="form_footer-input">
+                <p class="input_text">How did you hear about EPU?</p>
+                <select name="" class="select" id="how">
+                    <option value="none" placeholder="(select one)"></option>
+                    <option value="Friends">Friends</option>
+                    <option value="Search">Search</option>
+                </select>
+            </div>
+            <div class="form_footer-input">
+                <p class="input_text">Provide a bio:</p>
+                <textarea placeholder="I like to play football with my friendson the weekend...." rows="4" cols="20" class="input_demo"></textarea>
+            </div>
+        </div>
+        <input type="submit" value="Register" id="footer" onclick="getInfo()">
+    </div>
+    <script>
+        function getInfo(){
+            var firstname = document.getElementById("firstname").value;
+            var lastname = document.getElementById("lastname").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var age = document.getElementById("age").value;
+            var how = document.getElementById("how").value;
+            var user = {
+                firstname,
+                lastname ,
+                email,
+                password ,
+                age,
+                how,
+            }
+
+            console.log(user);
+        }
+    </script>
+</body>
+</html>
