@@ -33,17 +33,39 @@
                 <h5>Upload a profile picture</h5>
                 <input type="file" name="ChonTep" class="set_with" style="background-color: blue;">
                 <h5>Input your age (year):</h5>
-                <input type="datetime" name="" class="set_with">
+                <input type="datetime" name="" class="set_with" id="age">
                 <h5>How did your her about EPU?</h5>
-                <select name="epu1" class="set_with" >
+                <select name="epu1" class="set_with" id="how">
                     <option value="1">(select one)</option>
                     <option value="2">friend</option>
                     <option value="3">teacher</option>
                 </select>
                 <h5>Profile a bio:</h5>
-                <textarea placeholder="I like to play foot ball with my friends on the weekend..." name="bio" id="" cols="30" rows="10" class="set_textarea"></textarea>
+                <textarea placeholder="I like to play foot ball with my friends on the weekend..." name="bioname" id="bio" cols="30" rows="10" class="set_textarea"></textarea>
             </div> 
         </div>
+        <input type="submit" value="Registrer" id="footer" onclick="getInfor()">
     </div>
+    <script>
+        function getInfor(){
+            var firstname=document.getElementById("firstname").value;
+            var lastname=document.getElementById("lastname").value;
+            var email=document.getElementById("email").value;
+            var password=document.getElementById("password").value;
+            var age=document.getElementById("age").value;
+            var how=document.getElementById("how").value;
+            var bio=document.getElementById("bio").value;
+            var user={
+                firstname,
+                lastname,
+                email,
+                password,
+                age,
+                how,
+                bio,
+            }
+            console.log(user);
+        }
+    </script>
 </body>
 </html>
