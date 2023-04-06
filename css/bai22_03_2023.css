@@ -17,7 +17,8 @@ div[class="form1"]{
   }  
 .form_top {
     width: 100%;
-    margin: 0;
+    margin-bottom: 3px;
+    /* margin: 0; */
     margin-left: 0;
     margin-right: 0;
   }
@@ -36,6 +37,9 @@ h1{
 }
 h5{
     margin-bottom: 0px;
+}
+hr{
+    margin: 0px;
 }
 #footer{
     margin-top: 5px;

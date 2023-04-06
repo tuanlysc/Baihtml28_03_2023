@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How age</title>
+</head>
+<body>
+    <div class="form_wrapper">
+        <h1>Tính tuổi</h1>
+        <input type="text" name="day" id="text_day">
+        <input type="submit" value="tinh_toan" id="btn_age" onclick="Getage()">
+    </div>
+    <script>
+        function Getage(){
+            let a= parseInt(document.getElementById("btn_age").value);
+            if(isNaN(a)){
+                alert("Nhap lai !");
+                return;
+            }
+        }
+    </script>
+</body>
+</html>
